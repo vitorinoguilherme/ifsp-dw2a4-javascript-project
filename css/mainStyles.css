@@ -1,0 +1,16 @@
+.c-container {
+    text-align: center;
+}
+
+.c-container__examplesjs {
+    display: inline-block;
+}
+
+pre code {
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    text-align: justify;
+    padding: 20px;
+    font-size: large;
+  }

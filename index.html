@@ -5,8 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js-learning</title>
+
+
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/mainFunctions.js"></script>
+    <link rel="stylesheet" href="css/mainStyles.css" type="text/css">
+
 </head>
 <body>
+    <div class="c-container">
+        <div class="c-container__examplesjs">
+            <h1>Javascript Boas e Más Práticas de Desenvolvimento</h1></div><hr>
+            
+            <h2>Sempre ativar "use strict"</h2>
+            <p>Os navegadores são muito complacentes com a sintaxe JavaScript. Com a opção "use strict" ativada garantimos que erros silenciosos sejam obtidos</p>
+            <figure>
+                <pre>
+                    <code>
+                        'use' strict;
+
+                        globalVar = 12; // throws ReferenceError;
+                        delete Object.prototype; // throws a TypeError
+                        function sum(a, a, c) { // syntax error
+                            'use strict';
+                            return a + a + c; // wrong if this code ran
+                        }
+                    </code>
+                </pre>
+            </figure>
+
+            <h2>Use "===" Ao Invés de "=="</h2>
+            <p>Ao comparar se dois operandos tem o mesmo tipo e valor, o === retorna verdadeiro e !== retorna falso</p>
+            <p class="codepen" data-height="366" data-theme-id="dark" data-default-tab="js,result" data-user="vitorinoguilherme" data-slug-hash="vYxQpLa" style="height: 366px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Comparação">
+                <span>See the Pen <a href="https://codepen.io/vitorinoguilherme/pen/vYxQpLa">
+                Comparação</a> by Guilherme Vitorino (<a href="https://codepen.io/vitorinoguilherme">@vitorinoguilherme</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            <div id="examplesjs__expressions-and-operators"></div>
+
+            <h2>Evite Variáveis Globais</h2>
+            <p>
+                A razão é que todo arquivo JavaScript incluso na página roda no mesmo escopo. Caso tenha variáveis globais ou funções no seu código
+                e decida inserir scripts contendo os mesmos nomes das variáveis e funções eles vão sobrescrever o código escrito anteriormente
+            </p>
+            <p class="codepen" data-height="645" data-theme-id="dark" data-default-tab="js,result" data-user="vitorinoguilherme" data-slug-hash="JjWepGw" style="height: 645px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Globais">
+                <span>See the Pen <a href="https://codepen.io/vitorinoguilherme/pen/JjWepGw">
+                Globais</a> by Guilherme Vitorino (<a href="https://codepen.io/vitorinoguilherme">@vitorinoguilherme</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            <h2>Usar a Notação de Atalho quando fizer sentido</h2>
+            <p>As notações de atalho facilitam e deixam o código menor e mais limpo.</p>
+            <p class="codepen" data-height="538" data-theme-id="dark" data-default-tab="js" data-user="vitorinoguilherme" data-slug-hash="GRWwQer" style="height: 538px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="GRWwQer">
+                <span>See the Pen <a href="https://codepen.io/vitorinoguilherme/pen/GRWwQer">
+                GRWwQer</a> by Guilherme Vitorino (<a href="https://codepen.io/vitorinoguilherme">@vitorinoguilherme</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            <h2>A Forma Mais Rápida de Construir uma Cadeia de Caracteres</h2>
+            <p>Existem opções mais performáticas do que o for simples. Quando precisar iterar por um vetor ou objeto identifique a solução mais rápida para o trabalho em questão</p>
+            <p class="codepen" data-height="388" data-theme-id="dark" data-default-tab="js,result" data-user="vitorinoguilherme" data-slug-hash="JjWeLMR" style="height: 388px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="JjWeLMR">
+                <span>See the Pen <a href="https://codepen.io/vitorinoguilherme/pen/JjWeLMR">
+                JjWeLMR</a> by Guilherme Vitorino (<a href="https://codepen.io/vitorinoguilherme">@vitorinoguilherme</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+        </div>
+    </div>
     
+
+
 </body>
 </html>
