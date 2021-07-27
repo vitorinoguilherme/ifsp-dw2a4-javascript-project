@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js-learning</title>
 
-
     <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/mainFunctions.js"></script>
@@ -19,7 +18,7 @@
             <h1>Javascript Boas e Más Práticas de Desenvolvimento</h1></div><hr>
             
             <h2>Sempre ativar "use strict"</h2>
-            <p>Os navegadores são muito complacentes com a sintaxe JavaScript. Com a opção "use strict" ativada garantimos que erros silenciosos sejam obtidos</p>
+            <p>Os navegadores são muito complacentes com a sintaxe JavaScript. Com a opção <strong>"use strict"</strong> ativada garantimos que erros silenciosos sejam obtidos</p>
             <figure>
                 <pre>
                     <code>
@@ -47,8 +46,8 @@
 
             <h2>Evite Variáveis Globais</h2>
             <p>
-                A razão é que todo arquivo JavaScript incluso na página roda no mesmo escopo. Caso tenha variáveis globais ou funções no seu código
-                e decida inserir scripts contendo os mesmos nomes das variáveis e funções eles vão sobrescrever o código escrito anteriormente
+                A razão é que todo arquivo JavaScript incluso na página roda no mesmo escopo. <br> 
+                Caso tenha <strong>variáveis globais</strong> ou <strong>funções</strong>  no seu código e decida inserir scripts contendo os mesmos nomes das variáveis e funções eles vão sobrescrever o código escrito anteriormente
             </p>
             <p class="codepen" data-height="645" data-theme-id="dark" data-default-tab="js,result" data-user="vitorinoguilherme" data-slug-hash="JjWepGw" style="height: 645px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Globais">
                 <span>See the Pen <a href="https://codepen.io/vitorinoguilherme/pen/JjWepGw">
@@ -67,13 +66,61 @@
             <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
             <h2>A Forma Mais Rápida de Construir uma Cadeia de Caracteres</h2>
-            <p>Existem opções mais performáticas do que o for simples. Quando precisar iterar por um vetor ou objeto identifique a solução mais rápida para o trabalho em questão</p>
+            <p>
+                Existem opções mais performáticas do que o for simples.<br> 
+                Quando precisar iterar por um vetor ou objeto identifique a solução mais rápida para o trabalho em questão
+            </p>
             <p class="codepen" data-height="388" data-theme-id="dark" data-default-tab="js,result" data-user="vitorinoguilherme" data-slug-hash="JjWeLMR" style="height: 388px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="JjWeLMR">
                 <span>See the Pen <a href="https://codepen.io/vitorinoguilherme/pen/JjWeLMR">
                 JjWeLMR</a> by Guilherme Vitorino (<a href="https://codepen.io/vitorinoguilherme">@vitorinoguilherme</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
             </p>
             <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            <h2>Funções Auto-executáveis</h2>
+            <p>
+                São funções que automaticamente são executadas quando uma página carregar ou quando uma função pai for executada<br>
+                Simplesmente, envolva sua função em parênteses e adicione um par extra ao final.
+            </p>
+            <p class="codepen" data-height="371" data-theme-id="dark" data-default-tab="js,result" data-user="vitorinoguilherme" data-slug-hash="dyvwwVd" style="height: 371px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="dyvwwVd">
+                <span>See the Pen <a href="https://codepen.io/vitorinoguilherme/pen/dyvwwVd">
+                dyvwwVd</a> by Guilherme Vitorino (<a href="https://codepen.io/vitorinoguilherme">@vitorinoguilherme</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            <h2>"Don't Call Me. I'll Call You"</h2>
+            <p>As funções ditas de callback não são executadas diretamente, logo não recebem parênteses nos locais onde são chamadas.<br>
+                A esse tipo de problema damos o nome de <strong>"Invocação Prematura"</strong>.
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js" data-user="vitorinoguilherme" data-slug-hash="poeqqBb" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="callbackChamada">
+                <span>See the Pen <a href="https://codepen.io/vitorinoguilherme/pen/poeqqBb">
+                callbackChamada</a> by Guilherme Vitorino (<a href="https://codepen.io/vitorinoguilherme">@vitorinoguilherme</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            <h2>O escopo "this" pode não ser o que você espera</h2>
+            <p class="codepen" data-height="595" data-theme-id="dark" data-default-tab="js,result" data-user="vitorinoguilherme" data-slug-hash="vYxvwYb" data-preview="true" style="height: 595px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="vYxvwYb">
+                <span>See the Pen <a href="https://codepen.io/vitorinoguilherme/pen/vYxvwYb">
+                vYxvwYb</a> by Guilherme Vitorino (<a href="https://codepen.io/vitorinoguilherme">@vitorinoguilherme</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+            <h2>Usar Expressões de Funções no Lugar de Declarações de Funções</h2>
+            <p>
+                Declarações de funções são carregadas antes que qualquer código seja executado<br>
+                Enquanto Expressões de Funções são carregadas apenas quando o interpretador atinge essa linha de código.
+                <!-- https://medium.com/@mandeep1012/function-declarations-vs-function-expressions-b43646042052 -->
+            </p>
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js" data-user="vitorinoguilherme" data-slug-hash="vYxvoBe" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="vYxvoBe">
+                <span>See the Pen <a href="https://codepen.io/vitorinoguilherme/pen/vYxvoBe">
+                vYxvoBe</a> by Guilherme Vitorino (<a href="https://codepen.io/vitorinoguilherme">@vitorinoguilherme</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
         </div>
     </div>
     
